@@ -1,4 +1,4 @@
-void allprimes(int n){  //O(nloglog(n)) n is included
+void allprimes(int n){  //O(nloglog(n)) n is included nearly equal to O(N)
     vector<bool>v(n,1);
     v[0]=v[1]=false;
     for(int i=2;i*i<=n;i++){
