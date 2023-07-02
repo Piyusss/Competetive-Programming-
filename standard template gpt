@@ -1,0 +1,52 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cmath>
+#include <cstring>
+#include <queue>
+#include <stack>
+#include <map>
+#include <set>
+#include <bitset>
+
+using namespace std;
+
+// Constants piyusus
+const int MOD = 1e9 + 7;
+const int INF = 1e9;
+const double EPS = 1e-9;
+
+// Macros piyusus
+#define endl '\n'
+#define all(x) (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
+#define pb push_back
+#define mp make_pair
+#define sz(x) ((int)(x).size())
+#define forn(i, n) for (int i = 0; i < (n); ++i)
+
+// Typedefs piyusus
+typedef long long ll;
+typedef vector<int> vi;
+typedef pair<int, int> pii;
+
+// Function to solve the problem
+void solve() {
+    // Write your solution code here
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t = 1; // Number of test cases
+
+    // Uncomment the line below if multiple test cases are there
+    // cin >> t;
+
+    while (t--) {
+        solve();
+    }
+
+    return 0;
+}
