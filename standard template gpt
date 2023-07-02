@@ -15,10 +15,10 @@ const double EPS = 1e-9;
 #define sz(x) ((int)(x).size())
 #define rep(i, n) for (int i = 0; i < (n); ++i)
 
-// Typedefs
-typedef long long ll;
-typedef vector<int> vi;
-typedef pair<int, int> pii;
+// Shortcut for commonly used types using
+using ll = long long;
+using vi = vector<int>;
+using pii = pair<int, int>;
 
 void solve(){
     
