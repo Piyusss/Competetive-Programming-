@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Constants piyusus
+// Constants
 const int MOD = 1e9 + 7;
 const int INF = 1e9;
 const double EPS = 1e-9;
 
-// Macros piyusus
+// Macrospiyusus
 #define endl '\n'
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
@@ -15,24 +15,21 @@ const double EPS = 1e-9;
 #define sz(x) ((int)(x).size())
 #define rep(i, n) for (int i = 0; i < (n); ++i)
 
-// Typedefs piyusus
+// Typedefs
 typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int, int> pii;
 
-// Function to solve the problem
-void solve() {
-    // Write your solution code here
+void solve(){
+    
 }
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int t = 1; // Number of test cases
-
-    // Uncomment the line below if multiple test cases are there
-    // cin >> t;
+    int t=1;
+    cin>>t;
 
     while (t--) {
         solve();
