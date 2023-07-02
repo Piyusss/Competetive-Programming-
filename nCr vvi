@@ -1,0 +1,18 @@
+vector<vector<int>> generateCombinations(int n, int r) {  //(n-1,r)
+    vector<vector<int>> combinations;
+    vector<int> combination(r, 0);
+
+    function<void(int, int)> generate = [&](int index, int start) {
+        if (index == r) {
+            combinations.push_back(combination);
+            return;
+        }
+        for (int i = start; i <= n - r + index; i++) {
+            combination[index] = i;
+            generate(index + 1, i + 1);
+        }
+    };
+
+    generate(0, 1);
+    return combinations;
+}
