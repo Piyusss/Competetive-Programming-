@@ -1,0 +1,13 @@
+Implementing your code in the `solve()` function instead of the `main()` function provides several advantages in terms of code organization, readability, and modularity. Here are some reasons why implementing your code in the `solve()` function is preferred:
+
+1. Separation of Concerns: By implementing your code in the `solve()` function, you separate the problem-solving logic from the main program flow. The `main()` function is responsible for handling input/output, test case iterations, and other common tasks, while the `solve()` function focuses solely on solving the specific problem at hand. This separation makes your code more modular and easier to understand.
+
+2. Code Reusability: Placing your code in the `solve()` function allows you to easily reuse the same solution logic in different contexts. If you encounter a similar problem in the future or need to modify your code for a different scenario, you can reuse the `solve()` function without making changes to the main program structure.
+
+3. Readability and Maintainability: Separating the problem-solving code into a dedicated function enhances the readability of your code. It allows readers to quickly identify the core logic of your solution without being distracted by input/output operations or other auxiliary tasks. This improves the maintainability of your code as well, as any changes or optimizations can be made specifically in the `solve()` function without affecting the rest of the program.
+
+4. Testing and Debugging: By isolating your solution logic in the `solve()` function, you can easily test and debug it independently. You can write test cases, perform specific inputs, and verify the correctness of your algorithm without being concerned about the overall program flow or interfering with other parts of the code.
+
+5. Code Organization and Scalability: Placing your code in the `solve()` function allows for better code organization, especially when dealing with larger projects or multiple problem solutions within a single file. It helps you keep your code organized and maintain a clear structure, making it easier to navigate and modify as your project grows.
+
+Overall, implementing your code in the `solve()` function promotes better code organization, readability, modularity, and maintainability. It separates the core problem-solving logic from the main program flow, making your code more reusable and easier to understand, test, and debug.
