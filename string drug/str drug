@@ -1,0 +1,4 @@
+1. str.substr(start_pos, length)
+2. str1.compare(str2)
+3. size_t found = str.find(pattern)
+4. string result = str1 + str2
