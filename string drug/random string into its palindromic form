@@ -1,0 +1,43 @@
+string arrangeIntoPalindromicForm(const string& input) {
+    unordered_map<char, int> charCount;
+
+    // Count the frequency of each character
+    for (char ch : input) {
+        charCount[ch]++;
+    }
+
+    string palindrome;
+    char oddChar = '\0';
+
+    // Construct the first half of the palindrome
+    for (auto it = charCount.begin(); it != charCount.end(); ++it) {
+        char ch = it->first;
+        int count = it->second;
+
+        if (count % 2 == 0) {
+            int halfCount = count / 2;
+            palindrome += string(halfCount, ch);
+        } else {
+            if (oddChar == '\0') {
+                oddChar = ch;
+                int halfCount = count / 2;
+                palindrome += string(halfCount, ch);
+            } else {
+                // Palindrome formation not possible
+                return "Not Possible";
+            }
+        }
+    }
+
+    // Construct the second half of the palindrome
+    string secondHalf = palindrome;
+    reverse(secondHalf.begin(), secondHalf.end());
+
+    // If there was an odd character, add it to the middle of the palindrome
+    if (oddChar != '\0') {
+        palindrome += oddChar;
+    }
+
+    palindrome += secondHalf;
+    return palindrome;
+}
