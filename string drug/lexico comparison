@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string str1, str2;
+    cin >> str1 >> str2;
+    int comparison = str1.compare(str2); // Compare two strings
+    if (comparison == 0)
+        cout << "Strings are equal" << endl;
+    else if (comparison < 0)
+        cout << "str1 is lexicographically smaller than str2" << endl;
+    else
+        cout << "str1 is lexicographically greater than str2" << endl;
+    return 0;
+}
