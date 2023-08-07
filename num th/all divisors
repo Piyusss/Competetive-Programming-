@@ -1,0 +1,12 @@
+void alldivs(int n){
+   int cnt=0;
+   int sum=0;
+   for(int i=1;i<=sqrt(n);i++){
+    if(n%i==0){
+        cout<<i<<" "<<n/i<<" ";
+        cnt+=2;
+        sum+=i+n/i;
+    }
+   }
+   cout<<endl<<cnt<<endl<<sum;
+}
