@@ -14,3 +14,9 @@
 7.vc v={'a','b','g','u'};
     auto it=find(v.begin(),v.end(),'g');
     if(it!=v.end())cout<<it-v.begin();
+
+8.string st="pihushWorld";
+    st.erase(start_pos,length);
+
+9.string st="pihushWorld";
+    st.insert(start_pos,"xst");
