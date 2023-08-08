@@ -2,3 +2,6 @@
 2. str1.compare(str2)
 3. size_t found = str.find(pattern)
 4. string result = str1 + str2
+5. transform(st.begin(),st.end(),st.begin(),::toupper)
+   transform(st.begin(),st.end(),st.begin(),::tolower)
+6.
