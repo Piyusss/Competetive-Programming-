@@ -2,9 +2,15 @@
 2. str1.compare(str2)
 3. size_t found = str.find(pattern)
 4. string result = str1 + str2
+
 5. transform(st.begin(),st.end(),st.begin(),::toupper)
    transform(st.begin(),st.end(),st.begin(),::tolower)
+
 6.To check if a character in a string is lc || uc || no || spc:--- 
    1.if((st[i]>=65) && st[i]<=90)---->uc
    2.if((st[i]>=97) && st[i]<=122)---->lc
    3.if((st[i]>=48) && st[i]<=57)---->spc
+
+7.vc v={'a','b','g','u'};
+    auto it=find(v.begin(),v.end(),'g');
+    if(it!=v.end())cout<<it-v.begin();
