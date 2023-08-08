@@ -8,3 +8,6 @@
 8.lower_bound(vb,ve,x):--- return iterator(always >= than elements val)
 9.upper_bound(vb,ve,x):--- return iterator(always > than elements val)
 10.v.pop_back() :---- remove last element
+11.To find index of a element in vec:--
+    auto it=find(v.begin(),v.end(),el);
+    if(it!=v.end())cout<<it-v.begin();
