@@ -4,4 +4,7 @@
 4. string result = str1 + str2
 5. transform(st.begin(),st.end(),st.begin(),::toupper)
    transform(st.begin(),st.end(),st.begin(),::tolower)
-6.
+6.To check if a character in a string is lc || uc || no || spc:--- 
+   1.if((st[i]>=65) && st[i]<=90)---->uc
+   2.if((st[i]>=97) && st[i]<=122)---->lc
+   3.if((st[i]>=48) && st[i]<=57)---->spc
