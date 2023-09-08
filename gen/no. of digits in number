@@ -8,3 +8,6 @@ ll countDigit(long long n){
     }
     return count;
 }
+
+or
+int numOfDigits = floor(log10(n) + 1);
