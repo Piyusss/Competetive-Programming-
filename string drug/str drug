@@ -22,4 +22,8 @@
     st.insert(start_pos,"xst");
 
 10.The only difference bw the binary rep of small char(a-z) and capital char(A-Z) is that:--- 5th bit is set in small char
-                                                                                              5th bit is unset in capital char
+5th bit is unset in capital char
+
+11.stoi();
+
+12.to_string();
