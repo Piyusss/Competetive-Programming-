@@ -1,10 +1,10 @@
-vector<int> numtobin(ll b){
+vector<int> numtobin(long long b){
     vector<int>v;
     int i=0;
     while(b){
         v.pb(b%2);
         b=b/2;
         i++;
-    }
+    }reverse(all(v));
     return v;
 }
