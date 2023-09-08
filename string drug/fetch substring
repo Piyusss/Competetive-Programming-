@@ -11,3 +11,5 @@ int main() {
     cout << "Substring: " << substr << endl;
     return 0;
 }
+
+//to extract a Substring out of a string ,we use substr
