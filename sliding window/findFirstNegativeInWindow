@@ -1,0 +1,42 @@
+void findFirstNegativeInWindow(const vector<int>& arr, int K) {
+    int n = arr.size();
+    
+    // Create a deque to store indices of negative numbers
+    deque<int> negIndices;
+
+    // Process the first window separately to initialize the deque
+    for (int i = 0; i < K; ++i) {
+        if (arr[i] < 0) {
+            negIndices.push_back(i);
+        }
+    }
+
+    // Process the remaining windows
+    for (int i = K; i < n; ++i) {
+        // If the deque is not empty, the front element is the first negative number in the window
+        if (!negIndices.empty()) {
+            cout << arr[negIndices.front()] << " ";
+        } else {
+            cout << "0 "; // If no negative number found in the window, print 0
+        }
+
+        // Remove elements that are out of the current window
+        while (!negIndices.empty() && negIndices.front() <= i - K) {
+            negIndices.pop_front();
+        }
+
+        // Add the current element's index to the deque if it is negative
+        if (arr[i] < 0) {
+            negIndices.push_back(i);
+        }
+    }
+
+    // Print the first negative number for the last window
+    if (!negIndices.empty()) {
+        cout << arr[negIndices.front()] << " ";
+    } else {
+        cout << "0 ";
+    }
+
+    cout << endl;
+}
