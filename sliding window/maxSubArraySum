@@ -1,25 +1,4 @@
-int maxSubArraySum(vector<int>& arr, int k) {
-    if (arr.empty() || k <= 0) {
-        return 0;
-    }
-
-    int maxSum = INT_MIN;
-    int currentSum = 0;
-
-    for (int i = 0; i < arr.size(); ++i) {
-        currentSum += arr[i];
-
-        if (i >= k - 1) {
-            maxSum = max(maxSum, currentSum);
-            currentSum -= arr[i - k + 1];
-        }
-    }
-
-    return maxSum;
-}
-
-
-or
+fixed-sliding-window
 
 ll maxSubArraySum(vector<int>& arr, int k){
     if (arr.empty() || k <= 0)return 0;
@@ -40,3 +19,6 @@ ll maxSubArraySum(vector<int>& arr, int k){
     }
     return res;
 }
+
+
+-->no problem
