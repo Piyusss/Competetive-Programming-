@@ -17,3 +17,26 @@ int maxSubArraySum(vector<int>& arr, int k) {
 
     return maxSum;
 }
+
+
+or
+
+int maxSubArraySum(vector<int>& arr, int k){
+    if (arr.empty() || k <= 0)return 0;
+    int n=arr.size();
+    int res = INT_MIN;
+    int currentSum = 0;
+
+    int j=0;int i=0;
+    while(j<n) {
+        currentSum += arr[j];
+
+        if(j-i+1<k)j++;
+        else if (j-i+1==k) {
+            res = max(res, currentSum);
+            currentSum -= arr[i];
+            i++;j++;
+        }
+    }
+    return res;
+}
