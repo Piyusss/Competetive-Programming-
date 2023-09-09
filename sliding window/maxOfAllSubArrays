@@ -19,3 +19,6 @@ vi maxOfAllSubArray(vector<int>& arr, int k){
     }
     return ans;
 }
+
+
+---partially true
