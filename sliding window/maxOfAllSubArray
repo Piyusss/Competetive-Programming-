@@ -1,0 +1,21 @@
+vi maxOfAllSubArray(vector<int>& arr, int k){
+    vi ans;
+    if(arr.empty() || k <= 0)return ans;
+    int n=arr.size();
+    int res = INT_MIN;
+
+    priority_queue<int>mpq;
+    int j=0;int i=0;
+    while(j<n){
+        mpq.push(arr[j]);
+        if(j-i+1<k)j++;
+        else if (j-i+1==k) {
+          ans.pb(mpq.top());
+          if(arr[i]==mpq.top()){
+            mpq.pop();
+          }
+            i++;j++;
+        }
+    }
+    return ans;
+}
