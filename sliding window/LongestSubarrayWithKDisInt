@@ -1,0 +1,25 @@
+int LongestSubarrayWithKDisInt(string st,int n,int k){
+    int i=0;int j=0;
+    unordered_map<char,int>mp;int maxi=-1;
+    while(j<n){
+        mp[st[j]]++;
+
+        if(mp.size()<k)j++;
+        else if(mp.size()==k){
+            maxi=max(maxi,j-i+1);
+            j++;
+        }
+        else if(mp.size()>k){
+            while(mp.size()>k){
+                mp[st[i]]--;
+                if(mp[st[i]]==0)mp.erase(st[i]);
+                i++;
+            }
+            j++;
+        }
+    }
+    return maxi;
+}
+
+
+----->no problem
