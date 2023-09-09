@@ -1,3 +1,5 @@
+variable-sliding-window
+
 vi SizeOfLargestSubarrayOfSumK(vector<int>& arr, int k){
     vi ans;
     if (arr.empty() || k <= 0)return ans;
@@ -12,6 +14,35 @@ vi SizeOfLargestSubarrayOfSumK(vector<int>& arr, int k){
         else if(currentSum>k){
             i++;j++;
         }
+        else{
+           ans.pb(j-i+1);
+           currentSum-=arr[i];
+           i++;j++;
+        }
+    }
+    return ans;
+}---this might be wrong
+
+
+or
+
+
+
+vi LargestSubarrayOfSumK(vector<int>& arr, int k){
+    vi ans;
+    if (arr.empty() || k <= 0)return ans;
+    int n=arr.size();
+    int currentSum = 0;
+
+    int j=0;int i=0;
+    while(j<n) {
+        if(currentSum>k){
+            currentSum-=arr[i];
+            i++;continue;
+        }
+        currentSum += arr[j];
+
+        if(currentSum<k)j++;
         else{
            ans.pb(j-i+1);
            currentSum-=arr[i];
