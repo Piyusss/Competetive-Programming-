@@ -21,11 +21,11 @@ int maxSubArraySum(vector<int>& arr, int k) {
 
 or
 
-int maxSubArraySum(vector<int>& arr, int k){
+ll maxSubArraySum(vector<int>& arr, int k){
     if (arr.empty() || k <= 0)return 0;
     int n=arr.size();
-    int res = INT_MIN;
-    int currentSum = 0;
+    ll res = INT_MIN;
+    ll currentSum = 0;
 
     int j=0;int i=0;
     while(j<n) {
