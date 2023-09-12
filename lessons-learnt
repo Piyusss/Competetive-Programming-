@@ -1,1 +1,7 @@
-1.
+1.It is possible that INT_MAX might not be the largest in some questions.SO better ue LLONG_max or ULLONG_MAX.
+
+2.Taking XOR of even no of numbers twice creates whole array 0.
+
+3.To associate array values with their Indexes, use vector of pair and not MAp.
+
+4.
