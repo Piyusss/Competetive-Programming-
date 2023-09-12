@@ -1,0 +1,21 @@
+bool func(ll mid,ll k){
+	return (5*(mid)*(mid+1)/2)<=240-k;
+}
+void asquare(){
+    ll n,k;cin>>n>>k;
+
+  //base-case--if able to solve all problems
+    if((240-k)>=(5*(n)*(n+1)/2)){
+    	cout<<n<<endl;return;
+    }
+  //bin-search-code
+    ll s=0;ll e=n;ll mid=(s+e)/2;ll ans=0;
+    while(s+1<e){
+    	if(func(mid,k)){
+    		ans=mid;s=mid;
+    	}
+    	else e=mid;
+    	mid=(s+e)/2;
+    }
+    cout<<ans<<endl;
+}
