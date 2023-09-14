@@ -1,0 +1,5 @@
+1. 1st Method-------->store all elements of array into set and return the final set size.          //nlog(n)
+
+2. 2nd Method-------->store all elements of array into map(unordered_map) and return the final mp size().          //nlog(n)
+
+3. 3rd Method-------->sort the array and visit each to count that number not present before.            //this is preferred
