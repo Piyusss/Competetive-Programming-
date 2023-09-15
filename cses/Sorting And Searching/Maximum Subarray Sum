@@ -1,1 +1,3 @@
-kadanes algorithm
+extremest brute force-----work in O(N^3)---3 for loops
+corner brute force------work in O(N^2)---2 for loops+1prefix sum
+kadanes algorithm------work in O(N)
