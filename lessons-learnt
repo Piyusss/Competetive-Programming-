@@ -4,4 +4,4 @@
 
 3.To associate array values with their Indexes, use vector of pair and not MAp.
 
-4.
+4.If the constraint is of order 10^5 ...cant use N^2 ...maximum allowed is NlogN
