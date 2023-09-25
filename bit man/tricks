@@ -12,6 +12,7 @@
 
 6.Check if kth Bit is set:----  x & (1<<k)
 
-14.Count setBits in no X:----  __bulitin_popcount(X)
-15.Count no of 0Bits at start:----  __builtin_clz(X)
-16.Count no of 0Bits at end :----  __builtin_ctz(X)
+__builtin_popcount(unsigned int) returns the number of set bits (__builtin_popcount(0b0001'0010'1100) == 4)
+__builtin_ffs(int) finds the index of the first (most right) set bit (__builtin_ffs(0b0001'0010'1100) == 3)
+__builtin_clz(unsigned int) the count of leading zeros (__builtin_clz(0b0001'0010'1100) == 23)
+__builtin_ctz(unsigned int) the count of trailing zeros (__builtin_ctz(0b0001'0010'1100) == 2)
