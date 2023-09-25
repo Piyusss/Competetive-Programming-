@@ -5,11 +5,8 @@
                              a=a^b;
 
 3.Set the kth Bit:----  x | (1<<k)
-
 4.Unset the kth Bit:----  x & ~(1<<k)
-
 5.Toggle kth bit:----  x ^ (1<<k)
-
 6.Check if kth Bit is set:----  x & (1<<k)
 
 __builtin_popcount(unsigned int) returns the number of set bits (__builtin_popcount(0b0001'0010'1100) == 4)
