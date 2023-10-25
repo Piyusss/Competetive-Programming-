@@ -1,0 +1,21 @@
+bool canFormPalindrome(const std::string& str) {
+    // Create a map to count the frequency of each character
+    std::unordered_map<char, int> charCount;
+
+    // Count the frequency of each character in the string
+    for (char c : str) {
+        charCount[c]++;
+    }
+
+    int oddCount = 0; // Count of characters with an odd frequency
+
+    // Iterate through the map and count characters with odd frequencies
+    for (const auto& pair : charCount) {
+        if (pair.second % 2 != 0) {
+            oddCount++;
+        }
+    }
+
+    // For a palindrome, there can be at most one character with an odd frequency
+    return oddCount <= 1;
+}
