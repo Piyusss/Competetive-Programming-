@@ -1,0 +1,4 @@
+jab bi aisa ho ki humko ek string given ho or humko us string ka sara charcters ka cnt strore krna ho to jyada dimag mat lgao.
+bas ek 26 size ka array bnao then
+har ek element ko iterate karo string me with
+arr[st[i]-'a']++; kardo.
