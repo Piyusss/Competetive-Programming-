@@ -2,6 +2,10 @@
 
 2.Taking XOR of even no of numbers twice creates whole array 0.
 
-3.To associate array values with their Indexes, use vector of pair and not MAp.
+3.To associate array values with their Indexes, use vector of pair and not Map.
 
 4.If the constraint is of order 10^5 ...cant use N^2 ...maximum allowed is NlogN
+
+5.If we are asked to write permutation of array in easy level question,try to print from 1 to N or N to 1.
+
+6.
