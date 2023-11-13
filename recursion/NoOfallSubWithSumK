@@ -1,0 +1,13 @@
+ll NoOfallSubWithSumK(ll ind,int arr[],ll n,ll k,ll var){
+	if(ind==n){
+		if(var==k)return 1;
+		else return 0;
+	}
+	
+	var+=arr[ind];
+	ll l=NoOfallSubWithSumK(ind+1,arr,n,k,var);
+
+	var-=arr[ind];
+	ll r=NoOfallSubWithSumK(ind+1,arr,n,k,var);
+	return l+r;
+}
