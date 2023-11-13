@@ -1,0 +1,13 @@
+void findCombinationSingle(ll ind,ll target,vll &arr,vector<vll> &ans,vll &ds){
+	if(target==0){
+		ans.pb(ds);
+		return;
+	}
+	for(int i=ind;i<arr.size();i++){
+		if(i>ind&&arr[i]==arr[i-1])continue;
+		if(arr[i]>target)break;
+		ds.pb(arr[i]);
+		findCombinationSingle(i+1,target-arr[i],arr,ans,ds);
+		ds.pop_back();
+	}
+}
