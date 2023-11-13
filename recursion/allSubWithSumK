@@ -1,0 +1,17 @@
+void allSubWithSumK(ll ind,vll &v,int arr[],ll n,ll k,ll var){
+	if(ind==n){
+		if(var==k){
+			cout<<v;
+			cout<<endl;
+		}
+		return;
+	}
+	
+	v.pb(arr[ind]);
+	var+=arr[ind];
+	allSubWithSumK(ind+1,v,arr,n,k,var);
+	
+	var-=arr[ind];
+	v.pop_back();
+	allSubWithSumK(ind+1,v,arr,n,k,var);
+}
