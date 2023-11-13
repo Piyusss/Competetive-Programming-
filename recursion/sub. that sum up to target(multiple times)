@@ -1,4 +1,4 @@
-void findCombination(ll ind,ll target,vll &arr,vector<vll> &ans,vll &ds){
+void findCombinationMultiple(ll ind,ll target,vll &arr,vector<vll> &ans,vll &ds){
 	if(ind==arr.size()){
 		if(target==0){
 			ans.pb(ds);
@@ -9,8 +9,8 @@ void findCombination(ll ind,ll target,vll &arr,vector<vll> &ans,vll &ds){
 	//pick-up the element
 	if(arr[ind]<=target){
 		ds.pb(arr[ind]);
-		findCombination(ind,target-arr[ind],arr,ans,ds);
+		findCombinationMultiple(ind,target-arr[ind],arr,ans,ds);
 		ds.pop_back();
 	}
-	findCombination(ind+1,target,arr,ans,ds);
+	findCombinationMultiple(ind+1,target,arr,ans,ds);
 }
