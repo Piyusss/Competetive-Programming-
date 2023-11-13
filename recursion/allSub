@@ -1,0 +1,20 @@
+void allSub(ll ind,vll &v,int arr[],ll n){
+	if(ind==n){
+		cout<<v;
+		if(v.size()==0){
+		cout<<"{}";
+	}
+	cout<<endl;return;
+	}
+	
+	//not-pick or not take condition i.e this 
+	//element is not added to your subsequence
+	allSub(ind+1,v,arr,n);
+	
+	
+	//pick or take condition i.e
+	//this element is added to our subsequence
+	v.pb(arr[ind]);
+	allSub(ind+1,v,arr,n);
+	v.pop_back();
+}
