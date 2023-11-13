@@ -1,0 +1,12 @@
+void func(ll ind,ll sum,vll &arr,ll n,vll &ans){
+  if(ind==n){
+    ans.pb(sum);
+    return;
+  }
+
+  //pick-up the element
+  func(ind+1,sum+arr[ind],arr,n,ans);
+
+  //not pick-up the element
+  func(ind+1,sum,arr,n,ans);
+}
