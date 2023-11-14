@@ -35,3 +35,29 @@ void nQueens(ll col,vector<string> &board,vector<vector<string>>&ans,ll n){
 		}
 	}
 }
+
+
+
+
+
+
+
+//
+ll n;cin>>n;
+   vector<vector<string>>ans;
+   vector<string>board(n);
+   string s(n,'.');
+   for(ll i=0;i<n;i++){
+   	board[i]=s;
+   }
+   nQueens(0,board,ans,n);
+   ll flag=0;
+   for(auto it:ans){
+   	for(auto j:it){
+   		cout<<j<<endl;
+   	}
+   	cout<<endl;
+   }
+   
+   ll noOfWays=ans.size();
+   cout<<noOfWays<<endl;
