@@ -1,0 +1,14 @@
+void recurPermute(vll &ds,vll &nums,vvll &ans,ll freq[]){
+	if(ds.size()==nums.size()){
+		ans.pb(ds);return;
+	}
+	for(ll i=0 ; i<nums.size() ; i++){
+		if(!freq[i]){
+			ds.pb(nums[i]);
+			freq[i]=1;
+			recurPermute(ds,nums,ans,freq);
+			freq[i]=0;
+			ds.pop_back();
+		}
+	}
+}
