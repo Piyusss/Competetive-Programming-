@@ -1,0 +1,37 @@
+bool isSafe(ll row,ll col,vector<string>board,ll n){
+	ll duprow=row;
+	ll dupcol=col;
+	while(row>=0&&col>=0){
+		if(board[row][col]=='Q')return 0;
+		row--;col--;
+	}
+	row=duprow;
+	col=dupcol;
+	while(col>=0){
+		if(board[row][col]=='Q')return 0;
+		col--;
+	}
+	row=duprow;
+	col=dupcol;
+	while(row<n&&col>=0){
+		if(board[row][col]=='Q')return 0;
+		row++;col--;
+	}
+	return 1;
+}
+
+
+
+
+void nQueens(ll col,vector<string> &board,vector<vector<string>>&ans,ll n){
+	if(col==n){
+		ans.pb(board);return;
+	}
+	for(ll row=0;row<n;row++){
+		if(isSafe(row,col,board,n)){
+			board[row][col]='Q';
+			nQueens(col+1,board,ans,n);
+			board[row][col]='.';
+		}
+	}
+}
