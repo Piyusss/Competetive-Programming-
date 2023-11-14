@@ -1,0 +1,10 @@
+void recurPermuteOptimized(ll ind,vll &nums,vvll &ans){
+	if(ind==nums.size()){
+		ans.pb(nums);return;
+	}
+	for(ll i=ind;i<nums.size();i++){
+		swap(nums[ind],nums[i]);
+		recurPermuteOptimized(ind+1,nums,ans);
+		swap(nums[ind],nums[i]);
+	}
+}
