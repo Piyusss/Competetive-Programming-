@@ -1,0 +1,16 @@
+void solve(ll i, llj,vvll &a,ll n,vector<string>&ans,string move,
+vvll &vis,ll di[],ll dj[]){
+	if(i==n-1&&j==n-1){
+		ans.pb(move);return;
+	}
+	string dir="DLRU";
+	for(ll ind=0;ind<4;ind++){
+		ll nexti=i+di[ind];
+		ll nextj=j+dj[ind];
+		if(nexti>=0&&nextj>=0&&nexti<n&&nextj<n&&!vis[nexti][nextj]&&a[nexti][nextj]==1){
+			vis[i][j]=1;
+			solve(nexti,nextj,a,n,ans,move+dir[ind],vis,di,dj);
+			vis[i][j]=0;
+		}
+	}
+}
