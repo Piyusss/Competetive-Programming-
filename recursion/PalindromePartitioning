@@ -1,0 +1,20 @@
+bool isPal(string s,ll start,ll end){
+	while(start<=end){
+		if(s[start++]!=s[end--])return 0;
+	}
+	return 1;
+}
+
+
+void PalPart(ll ind,string s,vector<string>&path,vector<vector<string>>&res){
+	if(ind==s.size()){
+		res.pb(path);return;
+	}
+	for(ll i=ind;i<s.size();i++){
+		if(isPal(s,ind,i)){
+			path.pb(s.substr(ind,i-ind+1));
+			PalPart(i+1,s,path,res);
+			path.pop_back();
+		}
+	}
+}
