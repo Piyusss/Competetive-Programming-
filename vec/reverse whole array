@@ -1,3 +1,4 @@
+//using single loop
 void _144(){
 	vll v={1,2,3,4,5,6};
 	cout<<v<<endl;//before
@@ -8,3 +9,14 @@ void _144(){
 	}
 	cout<<v<<endl;//after
 }
+
+//using recursion
+void f(int i,int s,vll &v){//here i=0
+	if(i>=(s-i-1))return;
+	swap(v[i],v[s-i-1]);
+	i++;
+	return f(i,s,v);
+}
+
+//one-line
+reverse(all(v));
