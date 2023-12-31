@@ -14,8 +14,7 @@ void _144(){
 void f(int i,int s,vll &v){//here i=0
 	if(i>=(s-i-1))return;
 	swap(v[i],v[s-i-1]);
-	i++;
-	return f(i,s,v);
+	return f(++i,s,v);
 }
 
 //one-line
